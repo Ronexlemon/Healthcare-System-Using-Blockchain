@@ -7,10 +7,10 @@ const LandingPage = ({ children }: {
     children: React.ReactNode;
   }) => {
     return (
-        <main className="flex min-h-screen ">
+        <main className="flex flex-col min-h-screen ">
       
         <Narvbar/>
-        <div>{children}
+        <div >{children}
        
       </div>
     </main>
