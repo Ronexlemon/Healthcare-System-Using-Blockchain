@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import doc from "../../public/img/doc.png"
 
+
 export default function   LandingHero(){
 
     return(
