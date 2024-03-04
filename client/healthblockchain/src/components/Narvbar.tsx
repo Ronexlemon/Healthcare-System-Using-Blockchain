@@ -18,7 +18,7 @@ const Narvbar = ()=>{
                     About us
                 </div>
                 <div>
-                    FAQ's
+                    FAQ`s
                 </div>
 
 
