@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import doc from "../../public/img/doc.png"
+import Link from "next/link";
 
 
 export default function   LandingHero(){
@@ -16,7 +17,7 @@ export default function   LandingHero(){
                 <span className="text-2xl text-[#7F7F7F]">we are dedicated to providing exceptional healthcare <br/>
                 services to our community</span>
                 <div className="flex bg-black text-white h-10 w-52 rounded-xl justify-center items-center ">
-                    <button className="text-center text-xl">Get started</button>
+                    <button className="text-center text-xl"><Link href="/login">Get started</Link> </button>
                 </div>
 
             </div>
