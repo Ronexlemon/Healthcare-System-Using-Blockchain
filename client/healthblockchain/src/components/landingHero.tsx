@@ -8,8 +8,8 @@ export default function   LandingHero(){
     return(
         <div className=" bg-[#CAF4FC] h-screen  w-full ">
             <div className="flex justify-around ">
-            <div className="flex flex-col justify-center gap-2 ">
-                <h1 className=" text-7xl ">
+            <div className="flex flex-col justify-center gap-2 ml-2 ">
+                <h1 className=" text-5xl ">
                     Welcome to Reliance <br/>
                     Hospital
                 </h1>

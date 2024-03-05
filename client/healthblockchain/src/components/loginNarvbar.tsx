@@ -1,6 +1,7 @@
 import React from "react";
 import logoh from "../../public/img/logoh.png"
 import Image from "next/image";
+import Link from "next/link";
 
 
 const LoginNarvbar = ()=>{
@@ -11,14 +12,16 @@ const LoginNarvbar = ()=>{
 <Image src={logoh} alt=""/>
             </div>
             <div className="flex justify-around w-1/4">
-                <div>
-                    Home
+                <div >
+                    <Link href="/">Home</Link>
+                    
                 </div>
                 <div>
-                    About us
+                <Link href="/about">About us</Link>
                 </div>
                 <div>
-                    FAQ`s
+                <Link href="/faq"> FAQ`s</Link>
+                  
                 </div>
 
 

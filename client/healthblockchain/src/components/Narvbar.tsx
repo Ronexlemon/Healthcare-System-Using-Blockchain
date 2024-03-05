@@ -1,6 +1,7 @@
 import React from "react";
 import logoh from "../../public/img/logoh.png"
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Narvbar = ()=>{
@@ -12,23 +13,26 @@ const Narvbar = ()=>{
             </div>
             <div className="flex justify-around w-1/4">
                 <div>
-                    Home
+                
+                <Link href="/">Home</Link>
                 </div>
                 <div>
-                    About us
+                <Link href="/about">About us</Link>
                 </div>
                 <div>
-                    FAQ`s
+                <Link href="/faq"> FAQ`s</Link>
+                   
                 </div>
 
 
             </div>
             <div className="flex justify-around items-center gap-4">
     <div className="w-20 h-10  rounded-xl bg-black text-white flex justify-center items-center">
-        <button className="text-center">Sign-up</button>
+        <button className="text-center"> <Link href="/signup">Sign-up</Link>
+                    </button>
     </div>
     <div className="w-20 h-10 bg-black rounded-xl text-white flex justify-center items-center">
-        <button className="text-center">Login</button>
+        <button className="text-center">  <Link href="/login">Login</Link></button>
     </div>
 </div>
 
