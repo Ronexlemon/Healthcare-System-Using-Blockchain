@@ -1,6 +1,7 @@
 import React from "react";
 import logoh from "../../../public/img/logoh.png"
 import Image from "next/image";
+import ConnectButton from "../connectButon/connect";
 export default function LoginForm() {
     return (
         <div className="flex justify-center items-center h-screen">
@@ -31,9 +32,10 @@ export default function LoginForm() {
                     </a>
                 </div>
                 <div className="flex items-center justify-between  w-full">
-                    <button className="bg-[#A48989] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" >
+                    {/* <button className="bg-[#A48989] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" >
                         Sign In
-                    </button>
+                    </button> */}
+                    <ConnectButton/>
                     
                 </div>
             </div>
