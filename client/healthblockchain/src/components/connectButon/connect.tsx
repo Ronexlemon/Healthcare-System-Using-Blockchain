@@ -1,13 +1,11 @@
-import { useWeb3Modal,createWeb3Modal } from '@web3modal/wagmi/react'
+import React from 'react';
 
-export default function ConnectButton() {
-   
-  // 4. Use modal hook
-//   const { open,close } = useWeb3Modal()
-
+const ConnectButton = () => {
   return (
-    <>
-       <w3m-button />
-    </>
-  )
-}
+    <div>
+      <w3m-button />
+    </div>
+  );
+};
+
+export default ConnectButton;

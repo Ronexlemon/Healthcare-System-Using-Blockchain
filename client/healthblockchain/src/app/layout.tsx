@@ -4,8 +4,8 @@ import "./globals.css";
 import { cookieToInitialState } from 'wagmi'
 import { headers } from 'next/headers'
 
-import { config } from '@/config'
-import { ContextProvider } from '@/context'
+import { config } from '@/components/config'
+import { ContextProvider } from '@/components/context'
 
 const inter = Inter({ subsets: ["latin"] });
 
