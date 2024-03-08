@@ -14,7 +14,7 @@ export default function DashboardLayout({
         <div className="col-span-1/2">
             <SideBar/>
         </div>
-        <div>{children}</div>
+        <div className=" col-span-3">{children}</div>
 
     </div>
    
