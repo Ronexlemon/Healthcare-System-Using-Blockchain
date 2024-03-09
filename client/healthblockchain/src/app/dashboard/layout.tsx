@@ -1,5 +1,3 @@
-
-
 import SideBar from "@/components/sidebar";
 
 export default function DashboardLayout({
@@ -7,17 +5,16 @@ export default function DashboardLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
- 
   return (
-   <main className="bg-[#002062]" >
-    <div className="grid grid-cols-4 w-full ">
-        <div className="col-span-1/2">
-            <SideBar/>
+    <main className="min-h-screen bg-[#002062] overflow-hidden">
+      <div className="grid grid-cols-4 w-full">
+        <div className="col-span-1/2 h-screen overflow-y-auto">
+          <SideBar />
         </div>
-        <div className=" col-span-3 bg-[#002062]">{children}</div>
-
-    </div>
-   
-   </main>
+        <div className="col-span-3 bg-[#002062] h-screen overflow-y-auto">
+          {children}
+        </div>
+      </div>
+    </main>
   );
 }

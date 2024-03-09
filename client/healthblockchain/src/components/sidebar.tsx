@@ -4,6 +4,7 @@ import Image from "next/image";
 import { IoMdSettings, IoMdHome} from "react-icons/io";
 import { FaBox, FaHeart, FaChartPie } from "react-icons/fa";
 import { IoPersonRemove } from "react-icons/io5";
+import ConnectButton from "./connectButon/connect";
 
 export default function SideBar() {
     return (
@@ -35,6 +36,9 @@ export default function SideBar() {
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
                             <IoMdSettings className="h-3/4 w-1/4 text-gray-300" />
                             <button className="text-xl text-[#BDC2F6] hover:text-white">Settings</button>
+                        </div>
+                        <div>
+                            <ConnectButton/>
                         </div>
                     </div>
 
