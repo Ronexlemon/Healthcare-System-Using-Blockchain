@@ -28,6 +28,19 @@ export default function PatienceDashboard(){
 
                     </div>
 
+                    <div className="flex justify-between items-center w-3/4 h-1/4 mt-10 ">
+                        <div className="flex  items-center bg-white border border-gray-200 shadow h-full w-1/4 rounded-xl">
+                            <Image src={dash} alt="" className="h-1/4 w-1/4"/>
+                            <div className="flex flex-col justify-center">
+                                <span>202/3000</span>
+                                <span>steps taken</span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
 
 
 
