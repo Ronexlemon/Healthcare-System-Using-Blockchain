@@ -44,7 +44,7 @@ export default function PatienceDashboard(){
                     <div className=" flex justify-between w-3/4  h-1/4 rounded-xl bg-gradient-to-r from-indigo-500 from-10% to-emerald-500 to-90%">
                         <div className="flex flex-col  p-10 text-white">
                             <span className="font-bold">Hello Zulafa,</span>
-                            <span className="text-sm">Have a nice daya and don't forget to take<br/> care of your health</span>
+                            <span className="text-sm">Have a nice day and don`t forget to take<br/> care of your health</span>
                             <Link href="#" className=" mt-8 text-green-400 text-sm">learn more </Link>
 
                         </div>
