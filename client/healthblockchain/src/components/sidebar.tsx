@@ -8,39 +8,39 @@ import { IoPersonRemove } from "react-icons/io5";
 export default function SideBar() {
     return (
         <>
-            <div className="h-screen bg-white w-3/4 rounded border border-gray-300">
-                <div className="h-full m-5 flex flex-col justify-between">
+            <div className="h-full bg-blend-lighten bg-blue-900  w-3/4 rounded ">
+                <div className="h-full m-5 mt-0 flex flex-col justify-between">
 
                     <div className="flex flex-col justify-start space-y-8">
-                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
+                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center  mt-5">
                             <Image src={hLogo} alt="" />
-                            <button className="text-xl text-[#1A4FBA] hover:text-white">Healthish</button>
+                            <button className="text-xl text-[#BDC2F6] hover:text-white">Healthish</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
-                            <IoMdHome className="h-3/4 w-1/4" />
-                            <button>DashBoard</button>
+                            <IoMdHome className="h-3/4 w-1/4 text-gray-300" />
+                            <button className="text-xl text-[#BDC2F6] hover:text-white">DashBoard</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
-                            <FaChartPie className="h-3/4 w-1/4" />
-                            <button>Reports</button>
+                            <FaChartPie className="h-3/4 w-1/4 text-gray-300" />
+                            <button className="text-xl text-[#BDC2F6] hover:text-white">Reports</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
-                            <FaHeart className="h-3/4 w-1/4" />
-                            <button>Goals</button>
+                            <FaHeart className="h-3/4 w-1/4 text-gray-300" />
+                            <button className="text-xl text-[#BDC2F6] hover:text-white">Goals</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
-                            <FaBox className="h-3/4 w-1/4" />
-                            <button>Reminders</button>
+                            <FaBox className="h-3/4 w-1/4 text-gray-300" />
+                            <button className="text-xl text-[#BDC2F6] hover:text-white">Reminders</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
-                            <IoMdSettings className="h-3/4 w-1/4" />
-                            <button>Settings</button>
+                            <IoMdSettings className="h-3/4 w-1/4 text-gray-300" />
+                            <button className="text-xl text-[#BDC2F6] hover:text-white">Settings</button>
                         </div>
                     </div>
 
                     <div className="hover:bg-[#0E45B7] mb-10 hover:text-white w-3/4 h-10 rounded-xl flex  items-center">
-                    <IoPersonRemove className="h-3/4 w-1/4" />
-                        <button>Logout</button>
+                    <IoPersonRemove className="h-3/4 w-1/4 text-gray-300" />
+                        <button className="text-xl text-[#BDC2F6] hover:text-white">Logout</button>
                     </div>
 
                 </div>

@@ -9,12 +9,12 @@ export default function DashboardLayout({
 }>) {
  
   return (
-   <main className="bg-[#F2F8FD]" >
-    <div className="grid grid-cols-4 w-full">
+   <main className="bg-[#002062]" >
+    <div className="grid grid-cols-4 w-full ">
         <div className="col-span-1/2">
             <SideBar/>
         </div>
-        <div className=" col-span-3">{children}</div>
+        <div className=" col-span-3 bg-[#002062]">{children}</div>
 
     </div>
    
