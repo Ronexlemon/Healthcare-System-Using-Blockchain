@@ -28,30 +28,30 @@ export default function PatienceDashboard(){
 
                     </div>
 
-                    <div className="flex justify-between items-center w-3/4 h-1/4 mt-10 ">
-                        <div className="flex  items-center justify-around bg-white border border-gray-200 shadow h-full w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-1/4 w-1/4"/>
-                            <div className="flex flex-col justify-center">
-                                <span>202/3000</span>
-                                <span>steps taken</span>
+                    <div className="flex justify-between items-center w-3/4 h-1/4 mt-1 ">
+                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
+                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
+                            <div className="flex flex-col justify-center text-white">
+                                <span className="text-sm text-gray-400 flex  "> <h3 className=" font-bold text-white ">{202}/</h3>3000</span>
+                                <span>Step taken</span>
                             </div>
                             
 
                         </div>
-                        <div className="flex  items-center justify-around bg-white border border-gray-200 shadow h-full w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-1/4 w-1/4"/>
-                            <div className="flex flex-col justify-center">
-                                <span>202/3000</span>
-                                <span>steps taken</span>
+                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
+                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
+                            <div className="flex flex-col justify-center text-white">
+                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{408}</h3>kcal</span>
+                                <span>Calories burned</span>
                             </div>
                             
 
                         </div>
-                        <div className="flex  items-center justify-around bg-white border border-gray-200 shadow h-full w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-1/4 w-1/4"/>
-                            <div className="flex flex-col justify-center">
-                                <span>202/3000</span>
-                                <span>steps taken</span>
+                        <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
+                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
+                            <div className="flex flex-col justify-center text-white">
+                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{87}</h3>litres</span>
+                                <span>Water Taken</span>
                             </div>
                             
 
