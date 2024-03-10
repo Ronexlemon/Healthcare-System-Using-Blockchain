@@ -4,7 +4,7 @@ import { FormEvent } from "react";
 import logoh from "../../../public/img/logoh.png"
 import Image from "next/image";
 import { useForm } from "react-hook-form";
-import ConnectButton from "../connectButon/connect";
+
 
 import { authenticate } from "@/app/lib/action";
 
@@ -15,7 +15,7 @@ export default function LoginForm() {
         handleSubmit,
         formState: { errors },
       } = useForm();
-     const onSubmit = async(data: any,event:FormEvent<HTMLFormElement>) => {
+     const onSubmrit = async(data: any,event:FormEvent<HTMLFormElement>) => {
         
         event.preventDefault()
         
@@ -35,7 +35,7 @@ export default function LoginForm() {
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="bg-white  w-1/2 shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-xs shadow-slate-100">
-                <form onSubmit={handleSubmit((data) => console.log(data))} >
+                <form onSubmit={()=>{console.log("yollow")}} >
                 <div className="mb-4">
                     <h1 className="text-2xl font-bold mb-4 text-center">Login</h1>
                     <div className="flex flex-col  items-center m-2">

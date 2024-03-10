@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import logoh from "../../public/img/logoh.png"
 import Image from "next/image";

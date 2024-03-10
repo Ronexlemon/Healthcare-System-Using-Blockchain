@@ -6,7 +6,7 @@ import dash from "../../../public/img/dash.png"
 import Image from "next/image";
 import Link from "next/link";
 
-import BarChart from "../charts/patienceChart";
+import Barchart from "../Barchat";
 import { UserData } from "../Data";
 
 
