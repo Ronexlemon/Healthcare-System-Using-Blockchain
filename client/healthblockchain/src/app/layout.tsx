@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cookieToInitialState } from 'wagmi'
 import { headers } from 'next/headers'
 
-import { config } from '@/components/config'
-import { ContextProvider } from '@/components/context'
+import { cookieToInitialState } from 'wagmi'
+
+import { config } from '@/config'
+import { ContextProvider } from '@/context'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,8 @@ export default function RootLayout({
   const initialState = cookieToInitialState(config, headers().get('cookie'))
   return (
     <html lang="en">
-     <ContextProvider initialState={initialState}>{children}</ContextProvider>
+      <body className={inter.className}><ContextProvider initialState={initialState}>{children}</ContextProvider>
+</body>
     </html>
   );
 }

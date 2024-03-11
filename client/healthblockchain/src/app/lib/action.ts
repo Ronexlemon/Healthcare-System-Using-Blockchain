@@ -1,5 +1,9 @@
-import { signIn } from '@/auth';
-import { AuthError } from 'next-auth';
+"use server"
+import { signIn } from 'next-auth/react';
+
+type formData={
+  
+}
  
 // ...
  
@@ -8,16 +12,8 @@ export async function authenticate(
   formData: FormData,
 ) {
   try {
-    await signIn('credentials', formData);
+    await signIn('credentials', );
   } catch (error) {
-    if (error instanceof AuthError) {
-      switch (error.type) {
-        case 'CredentialsSignin':
-          return 'Invalid credentials.';
-        default:
-          return 'Something went wrong.';
-      }
-    }
-    throw error;
+    
   }
 }

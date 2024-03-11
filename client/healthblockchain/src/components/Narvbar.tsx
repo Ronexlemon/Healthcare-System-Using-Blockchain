@@ -8,7 +8,7 @@ import Link from "next/link";
 const Narvbar = ()=>{
 
     return(
-        <div className="flex justify-around w-full items-center h-20 bg-[#4BB5E9] text-white ">
+        <div className="flex justify-around w-full  items-center h-20 bg-blend-lighten bg-blue-900  text-white ">
             <div>
 <Image src={logoh} alt=""/>
             </div>
