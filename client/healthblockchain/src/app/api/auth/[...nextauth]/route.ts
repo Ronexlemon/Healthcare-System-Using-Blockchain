@@ -1,6 +1,9 @@
 
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
+import connect from "@/lib/mongodb";
+import User from "@/model/User";
+import bcrypt from "bcryptjs";
 
 export const authOptions: any = {
     providers: [
@@ -13,18 +16,21 @@ export const authOptions: any = {
           },
           async authorize(credentials: any, req) {
             // Add logic here to look up the user from the credentials supplied
-            const user = { id: "1", name: "J Smith", email: "jsmith@example.com",password:"12345" };
-
-            console.log("use is user",credentials)
-    
-            // Validate credentials here
-            if (user.email === credentials.email && user.password === credentials.password) {
-              // Return the user object if credentials are valid
-              return user;
-            } else {
-              // Return null if credentials are invalid
-              return null;
-            }
+            await connect()
+            try {
+                        const user = await User.findOne({ phoneNumber: credentials.phoneNumber });
+                        if (user) {
+                          const isPasswordCorrect = await bcrypt.compare(
+                            credentials.password,
+                            user.password
+                          );
+                          if (isPasswordCorrect) {
+                            return user;
+                          }
+                        }
+                      } catch (err: any) {
+                        throw new Error(err);}
+                      
           },
         }),
       ],
