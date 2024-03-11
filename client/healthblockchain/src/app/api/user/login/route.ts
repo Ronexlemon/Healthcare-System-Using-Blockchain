@@ -14,7 +14,7 @@ export async function POST(request:any) {
 
     try{
       if(!user){
-        return new NextResponse("User does not exist",{
+        return new NextResponse(JSON.stringify({ error: 'user does not exists' }),{
           status:400
         });
   
@@ -25,18 +25,18 @@ export async function POST(request:any) {
           user.password
         );
         if (isPasswordCorrect) {
-          return new NextResponse("login success",{
+          return new NextResponse(JSON.stringify({ message: 'Success' ,user}), { 
             status:200
-          });
+          },);
     
         }
       }
       
     }catch(error:any){
-      return  new NextResponse(error,{
-        status:500,
-      })
+      return new NextResponse(JSON.stringify({ error: error }),{
+        status:500
+      });
     }
-    return  NextResponse.json({hello:"world"})
+   
  
 }
