@@ -5,12 +5,14 @@ import logoh from "../../../public/img/logoh.png"
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { signIn } from "next-auth/react";
+//import { useRouter } from "next/router";
 
 
-import { authenticate } from "@/app/lib/action";
-import { SignInUser } from "../config/ApiConfig";
 
 export default function LoginForm() {
+   // const router = useRouter();
+
+
     
     const {
         register,
@@ -37,6 +39,11 @@ export default function LoginForm() {
                 password:data?.password,
               })
             console.log("res is  giving",res);
+            if (res?.status == 200){
+                //router.push("/dashboard/patience")
+               // router.replace("/dashboard/patience")
+                
+            }
               
           
           

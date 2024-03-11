@@ -4,7 +4,7 @@ export default function About() {
     return (
         <div className="bg-[#CAF4FC] h-[50vh] w-full ">
             <div className="h-full w-full max-w-screen">
-                <div className="flex flex-col  items-center h-full bg-white">
+                <div className="flex flex-col  items-center h-full bg-gray-300">
                     <span className="text-2xl">Why Reliance?</span>
                     <div className="flex justify-evenly items-center w-full mt-4 text-2xl">
                         {/* Card 1 */}

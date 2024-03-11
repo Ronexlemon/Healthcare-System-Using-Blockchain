@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Faq() {
     return (
-        <div className="bg-[#D2F5EE] h-[50vh] w-full ">
+        <div className="bg-blend-lighten bg-blue-500 h-[50vh] w-full ">
             <div className="h-full w-full max-w-screen">
                 <div className="flex flex-col  items-center h-full">
                     <span className="text-5xl">FAQ`s</span>
