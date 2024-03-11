@@ -7,7 +7,7 @@ export async function POST(request:any) {
     await connect();
     const existingUser = await User.findOne({email});
     if(existingUser){
-      return new NextResponse("phoneNumber already in use",{
+      return new NextResponse(JSON.stringify({ error: 'Email exists' }),{
         status:400
       });
     }
@@ -23,12 +23,12 @@ export async function POST(request:any) {
 
     try{
       await newUser.save();
-      return new NextResponse("User is registerd",{
+      return new NextResponse(JSON.stringify({ message: 'Success' }),{
         status:200
       });
 
     }catch(error:any){
-      return  new NextResponse(error,{
+      return  new NextResponse(JSON.stringify({ error:error }),{
         status:500,
       })
     }
