@@ -2,6 +2,33 @@ import React from "react";
 import logoh from "../../../public/img/logoh.png"
 import Image from "next/image";
 export default function SignUpForm() {
+    const data = {
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'john@example.com',
+        password: 'examplepassword'
+      };
+      
+      fetch('http://localhost:3000/api/yourEndpointName', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="bg-white  w-1/2 shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-xs shadow-slate-100">

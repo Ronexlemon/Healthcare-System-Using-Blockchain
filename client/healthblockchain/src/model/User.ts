@@ -5,18 +5,23 @@ const {Schema} = mongoose;
         email:{
             type:String,
             unique:true,
-            required:false,
+            required:true,
         },
         
         password:{
             type:String,
-            required: false,
+            required:true,
         },
        
-          fullName:{
+          firstName:{
             type:String,
             unique:false,
-            required:false,
+            required:true,
+        },
+        lastName:{
+            type:String,
+            unique:false,
+            required:true,
         },
 
     },
