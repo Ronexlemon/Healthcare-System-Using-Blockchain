@@ -1,6 +1,6 @@
 import HospitalDashboard from "@/components/dashboard/hospital"
 
-export default function PatiencePage(){
+export default function HospitalPage(){
 
     return(
         <>
