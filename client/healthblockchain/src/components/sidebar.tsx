@@ -21,7 +21,7 @@ export default function SideBar() {
                             <Image src={hLogo} alt="" />
                             <button className="text-xl text-[#BDC2F6] hover:text-white">Healthish</button>
                         </div>
-                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
+                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/patience")}>
                             <IoMdHome className="h-3/4 w-1/4 text-gray-300" />
                             <button className="text-xl text-[#BDC2F6] hover:text-white">DashBoard</button>
                         </div>
@@ -39,7 +39,7 @@ export default function SideBar() {
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center " onClick={()=>router.push("/patience/claimform")}>
                             <FaBox className="h-3/4 w-1/4 text-gray-300" />
-                            <button  className="text-xl text-[#BDC2F6] hover:text-white">Claim</button>
+                            <button  className="text-xl text-[#BDC2F6] hover:text-white">claim details</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
                             <IoMdSettings className="h-3/4 w-1/4 text-gray-300" />

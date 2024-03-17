@@ -55,6 +55,12 @@ export default function PatienceDashboard(){
                         <Image src={dash}  alt=""/>
 
                     </div>
+                    <div className="flex w-3/4 mt-8 items-center justify-center">
+  <button className="bg-[#181d46] hover:bg-[#1B2269] text-white font-bold py-2 px-4 rounded w-1/2 ">
+    Claim Status
+  </button>
+</div>
+
 
                     <div className="flex justify-between items-center w-3/4 h-1/4  ">
                        <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
@@ -87,18 +93,13 @@ export default function PatienceDashboard(){
 
 
                     </div>
-                    {/* chart */}
-                    <div className="grid grid-cols-5 w-5/6 gap-4 h-1/4">
-                        <div className="  col-span-3 bg-blend-lighten bg-blue-900  h-full rounded-xl ">
+                   {/* //claim details */}
 
-                        </div>
-                        <div className=" bg-blend-lighten bg-blue-900  h-full rounded-xl ">
-
+                   <div className="flex w-3/4 mt-8 items-center justify-center">
+  <button className="bg-[#181d46] hover:bg-[#1B2269] text-white font-bold py-2 px-4 rounded w-1/2 ">
+    Claim Details
+  </button>
 </div>
-
-
-
-                    </div>
 
                     {/* reminders */}
                       <div className="flex justify-between items-center w-3/4 h-1/4 mt-2  ">
