@@ -9,6 +9,9 @@ import Link from "next/link";
 
 import Barchart from "../Barchat";
 import { UserData } from "../Data";
+import BarCharts from "../charts/patienceChart";
+import MonthlyUsers from "../charts/monthlyUsers";
+
 
 
 export default function HospitalDashboard(){
@@ -100,37 +103,34 @@ export default function HospitalDashboard(){
 
 
                     {/* reminders */}
-                      <div className="flex justify-between items-center w-full h-1/4 mt-10  ">
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900  h-full  shadow  w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
-                            <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex  "> <h3 className=" font-bold text-white ">{202}/</h3>3000</span>
-                                <span>Step taken</span>
+                    <div className="grid grid-cols-6 mt-2 w-full h-1/2">
+                        <div className=" col-span-4 ">
+                            <div className="flex flex-col gap-2  ">
+                                <div  className=" w-full">
+                                    
+                                    <BarCharts/>
+
+                                </div>
+                                <div  className="h-44 w-full ">
+                                    <MonthlyUsers/>
+
+                                </div>
+
                             </div>
-                            
 
                         </div>
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow  h-full w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
-                            <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{408}</h3>kcal</span>
-                                <span>Calories burned</span>
-                            </div>
-                            
+                         {/* ?//second div */}
+                    <div className="flex justify-between items-center col-span-2">
+                        
 
-                        </div>
-                        <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow  h-full w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
-                            <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{87}</h3>litres</span>
-                                <span>Water Taken</span>
-                            </div>
-                            
+<span className="text-center">Performance analysis</span>
 
-                        </div>
-
+</div>
 
                     </div>
+                    
+                   
+                   
 
 
                     </div>
