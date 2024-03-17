@@ -6,7 +6,7 @@ import User from "@/model/User";
 import bcrypt from "bcryptjs";
 import Email from "next-auth/providers/email";
 
-export const authOptions: any = {
+ const authOptions: any = {
  
 
     providers: [
