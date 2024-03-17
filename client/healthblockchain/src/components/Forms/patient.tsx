@@ -114,12 +114,100 @@ const PatientForm =()=>{
         <div className="w-full">
             <span className="text-2xl">Details of Medical Expense</span>
         </div>
-        <div className="flex flex-col h-1/4 w-full">
-            <table className="w-full">
+        <div className="flex flex-col h-1/4 w-3/4">
+        <div className="border border-black">
+  <div className="grid grid-cols-2">
+    <div className="border border-black">
+      <div className="grid grid-cols-1">
+        <div className="border  border-black p-2 text-center">OUT-PATIENT:</div>
+        
+      </div>
+      <div className="grid grid-cols-2">
+        <div className="border border-black p-2 text-sm">No. of consultations</div>
+        <div className="border border-black p-2"> <input type="text" name="name" className=" bg-transparent outline-none text-center "/></div>
+      </div>
+    </div>
+    <div className="border border-black">
+    <div className="grid grid-cols-1">
+        <div className="border  border-black p-2 text-center">IN-PATIENT:</div>
+       
+      </div>
+      <div className="grid grid-cols-2">
+        <div className="border border-black p-2 text-sm">Hospital confinement from</div>
+        <div className="border border-black p-2"><input type="text" name="name" className=" bg-transparent outline-none text-center "/></div>
+      </div>
+    </div>
+  </div>
+  <div className="grid grid-cols-2">
+    <div className="border border-black">
+      <div className="grid grid-cols-2">
+        <div className="border border-black p-2 text-sm">Consultation fees</div>
+        <div className="border border-black p-2"><input type="text" name="name" className=" bg-transparent outline-none text-center "/></div>
+      </div>
+      <div className="grid grid-cols-2">
+        <div className="border border-black p-2 text-sm">Cost of Prescribe drugs</div>
+        <div className="border border-black p-2 text-sm"><input type="text" name="name" className=" bg-transparent outline-none text-center "/></div>
+      </div>
+    </div>
+    <div className="border border-black">
+      <div className="grid grid-cols-2">
+        <div className="border border-black p-2 text-sm">Accomodation charges</div>
+        <div className="border border-black p-2 text-sm"><input type="text" name="name" className=" bg-transparent outline-none text-center "/></div>
+      </div>
+      <div className="grid grid-cols-2">
+        <div className="border border-black p-2 text-sm">Prescribed drugs</div>
+        <div className="border border-black p-2 text-sm"><input type="text" name="name" className=" bg-transparent outline-none text-center "/></div>
+      </div>
+    </div>
+  </div>
+</div>
+{/* //after table */}
 
-            </table>
+<div className="flex mt-2 ">
+                <div className="flex items-center justify-around">
+                    <label className="text-sm">Name of  Attending Doctor</label>
+                    <input type="text" name="name" className="border-b-2 border-black bg-transparent outline-none text-center w-1/2 "/>
+
+                </div>
+                <div className="flex items-center justify-around">
+                    <label className="text-sm">Dr. Signature</label>
+                    <input type="text" name="name" className="border-b-2 border-black bg-transparent outline-none text-center w-1/2 "/>
+
+                </div>
+               
+               
+            </div>
+            <div className="flex mt-2 ">
+                <div className="flex items-center justify-around">
+                    <label className="text-sm">Address of practice</label>
+                    <input type="text" name="name" className="border-b-2 border-black bg-transparent outline-none text-center w-1/2 "/>
+
+                </div>
+                <div className="flex items-center justify-around">
+                    <label className="text-sm">Date & Stamp</label>
+                    <input type="text" name="name" className="border-b-2 border-black bg-transparent outline-none text-center w-1/2 "/>
+
+                </div>
+               
+               
+            </div>
+
+
 
         </div>
+
+        {/* //submit */}
+
+        <div className="inline-block w-1/2 mt-2">
+  <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full">
+    Submit
+  </button>
+</div>
+<div className="flex items-start w-1/2 mt-2">
+    <input type="checkbox" />
+    <label className="text-sm">I want to protect my data by signing an NDA</label>
+</div>
+
         
 
 
