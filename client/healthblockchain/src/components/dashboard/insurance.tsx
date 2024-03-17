@@ -3,12 +3,20 @@ import React, { useState } from "react";
 
 import { useRouter } from "next/navigation";
 import dash from "../../../public/img/dash.png"
+import one from "../../../public/img/onee.png"
+import two from "../../../public/img/twoo.png"
+import three  from "../../../public/img/three.png"
+
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 
 import Barchart from "../Barchat";
 import { UserData } from "../Data";
+
+import SatisFactionRate from "../charts/insuranceSatisfactionRate";
+
+
 
 
 export default function InsuranceDashboard(){
@@ -38,6 +46,12 @@ export default function InsuranceDashboard(){
 
     return(
         <div className="w-full h-screen mt-5">
+            <div className="grid grid-cols-6 ">
+                <div className="h-full col-span-4">
+
+                
+
+            
             <div className="flex justify-between items-center" >
                 <div className="mb-1">
                 <span className="text-white">Dashboard Overview</span>
@@ -45,41 +59,50 @@ export default function InsuranceDashboard(){
                     </div>
                     
                    
-                    <div className=" flex justify-between w-3/4  h-1/4 rounded-xl bg-gradient-to-r from-indigo-500 from-10% to-emerald-500 to-90%">
+                    <div className=" flex justify-between w-full   rounded-xl bg-gradient-to-r from-[#0E45B7] from-10% to-[#0E45B7] to-100% mb-2">
                         <div className="flex flex-col  p-10 text-white">
-                            <span className="font-bold">{session?.user?.user?.firstName}  {session?.user?.user?.lastName},</span>
-                            <span className="text-sm">Have a nice day and don`t forget to take<br/> care of your health</span>
-                            <Link href="#" className=" mt-8 text-green-400 text-sm">learn more </Link>
+                            <span className="font-bold">Hello,{session?.user?.user?.firstName}  {session?.user?.user?.lastName}</span>
+                            <span className="text-sm">Welcome To Jitume Insurance<br/> Dashboard</span>
+                            <Link href="#" className=" mt-8 text-white text-sm">learn more </Link>
 
                         </div>
-                        <Image src={dash}  alt=""/>
+                        {/* <Image src={dash}  alt=""/> */}
 
                     </div>
 
-                    <div className="flex justify-between items-center w-3/4 h-1/4  ">
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
+                    <div className="flex w-full mt-8 items-center justify-center rounded">
+  <button className="bg-[#181d46] hover:bg-[#1B2269] text-white font-bold py-2 px-4 rounded w-1/2 ">
+    Claim Status
+  </button>
+</div>
+                  
+
+
+                    <div className="flex justify-between items-center w-full h-1/4  ">
+                       <div className="flex  items-center justify-around bg-blend-lighten bg-gray-300 gap-2   shadow h-3/4 w-1/4 rounded-xl p-5">
+                            <Image src={one} alt="" className="h-1/2 w-1/2"/>
                             <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex  "> <h3 className=" font-bold text-white ">{202}/</h3>3000</span>
-                                <span>Step taken</span>
+                            <span className="text-xl text-black flex gap-2 ">Approved</span>
+                                
+                              
                             </div>
                             
 
                         </div>
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
+                       <div className="flex  items-center justify-around bg-blend-lighten bg-gray-300 gap-2  shadow h-3/4 w-1/4 rounded-xl p-5">
+                            <Image src={two} alt="" className="h-1/2 w-1/2"/>
                             <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{408}</h3>kcal</span>
-                                <span>Calories burned</span>
+                                <span className="text-xl text-black flex gap-2 ">Pending</span>
+                                
                             </div>
                             
 
                         </div>
-                        <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
+                        <div className="flex  items-center justify-around bg-blend-lighten bg-gray-300  gap-2  shadow h-3/4 w-1/4 rounded-xl p-5">
+                            <Image src={three} alt="" className="h-1/2 w-1/2 rounded"/>
                             <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{87}</h3>litres</span>
-                                <span>Water Taken</span>
+                                <span className="text-xl text-black flex gap-2 ">Rejected</span>
+                                
                             </div>
                             
 
@@ -87,55 +110,50 @@ export default function InsuranceDashboard(){
 
 
                     </div>
-                    {/* chart */}
-                    <div className="grid grid-cols-5 w-5/6 gap-4 h-1/4">
-                        <div className="  col-span-3 bg-blend-lighten bg-blue-900  h-full rounded-xl ">
+                   {/* //claim details */}
+
+
+                    {/* reminders */}
+                    <div className="grid grid-cols-6 mt-2 w-full h-1/2">
+                        <div className=" col-span-4 ">
+                            <div className="flex flex-col gap-2  ">
+                                <div  className=" w-full">
+                                    
+                                    <SatisFactionRate/>
+
+                                </div>
+                                
+
+                            </div>
 
                         </div>
-                        <div className=" bg-blend-lighten bg-blue-900  h-full rounded-xl ">
+                         {/* ?//second div */}
+                    <div className="flex justify-between items-center col-span-2">
+                        
+
+{/* <span className="text-center">Performance analysis</span> */}
 
 </div>
 
+                    </div>
+                    
+                   
+                   
 
 
                     </div>
+                    {/* //next column */}
+                    {/* <div className="flex flex-col w-full h-full items-center mt-6">
 
-                    {/* reminders */}
-                      <div className="flex justify-between items-center w-3/4 h-1/4 mt-2  ">
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900  h-full  shadow  w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
-                            <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex  "> <h3 className=" font-bold text-white ">{202}/</h3>3000</span>
-                                <span>Step taken</span>
+                        <div className="flex items-center   bg-blend-lighten bg-blue-900   shadow h-1/4 w-3/4 rounded-xl ">
+                            <div className="flex items-center ">
+                            <Image src={dash} alt="" className="h-3/4 w-3/4"/>
                             </div>
-                            
-
-                        </div>
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow  h-full w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
-                            <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{408}</h3>kcal</span>
-                                <span>Calories burned</span>
-                            </div>
-                            
-
-                        </div>
-                        <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow  h-full w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
-                            <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{87}</h3>litres</span>
-                                <span>Water Taken</span>
-                            </div>
-                            
 
                         </div>
 
-
+                    </div> */}
                     </div>
-
-
-
-
         </div>
     )
 }

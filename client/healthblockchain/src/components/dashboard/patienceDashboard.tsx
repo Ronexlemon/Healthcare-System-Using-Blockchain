@@ -6,6 +6,9 @@ import dash from "../../../public/img/dash.png"
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import one from "../../../public/img/onee.png"
+import two from "../../../public/img/twoo.png"
+import three  from "../../../public/img/three.png"
 
 import Barchart from "../Barchat";
 import { UserData } from "../Data";
@@ -69,8 +72,8 @@ export default function PatienceDashboard(){
 
 
                     <div className="flex justify-between items-center w-full h-1/4  ">
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
+                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900  gap-2  shadow h-1/2 w-1/4 rounded-xl p-5">
+                            <Image src={one} alt="" className="h-1/2 w-1/2"/>
                             <div className="flex flex-col justify-center text-white">
                                 <span className="text-sm text-gray-400 flex  "> Claim</span>
                                 <span className="text-gray-400">Approved</span>
@@ -78,8 +81,8 @@ export default function PatienceDashboard(){
                             
 
                         </div>
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
+                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900 gap-2  shadow h-1/2 w-1/4 rounded-xl p-5">
+                            <Image src={two} alt="" className="h-1/2 w-1/2"/>
                             <div className="flex flex-col justify-center text-white">
                                 <span className="text-sm text-gray-400 flex gap-2 ">Claim</span>
                                 <span className="text-gray-400">Pending</span>
@@ -87,8 +90,8 @@ export default function PatienceDashboard(){
                             
 
                         </div>
-                        <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
-                            <Image src={dash} alt="" className="h-3/4 w-1/4"/>
+                        <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900 gap-2   shadow h-1/2 w-1/4 rounded-xl p-5">
+                            <Image src={three} alt="" className="h-1/2 w-1/2"/>
                             <div className="flex flex-col justify-center text-white">
                                 <span className="text-sm text-gray-400 flex gap-2 ">Claim</span>
                                 <span className="text-gray-400">Rejected</span>
