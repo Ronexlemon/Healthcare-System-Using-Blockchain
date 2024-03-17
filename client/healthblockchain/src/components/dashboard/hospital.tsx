@@ -38,6 +38,12 @@ export default function HospitalDashboard(){
 
     return(
         <div className="w-full h-screen mt-5">
+            <div className="grid grid-cols-6 ">
+                <div className="h-full col-span-4">
+
+                
+
+            
             <div className="flex justify-between items-center" >
                 <div className="mb-1">
                 <span className="text-white">Dashboard Overview</span>
@@ -45,41 +51,44 @@ export default function HospitalDashboard(){
                     </div>
                     
                    
-                    <div className=" flex justify-between w-3/4  h-1/4 rounded-xl bg-gradient-to-r from-indigo-500 from-10% to-emerald-500 to-90%">
+                    <div className=" flex justify-between w-full   rounded-xl bg-gradient-to-r from-[#7A40F2] from-10% to-[#7A40F2] to-100% mb-2">
                         <div className="flex flex-col  p-10 text-white">
-                            <span className="font-bold">{session?.user?.user?.firstName}  {session?.user?.user?.lastName},</span>
-                            <span className="text-sm">Have a nice day and don`t forget to take<br/> care of your health</span>
-                            <Link href="#" className=" mt-8 text-green-400 text-sm">learn more </Link>
+                            <span className="font-bold">Hello,{session?.user?.user?.firstName}  {session?.user?.user?.lastName}</span>
+                            <span className="text-sm">Welcome To Admin<br/> Dashboard</span>
+                            <Link href="#" className=" mt-8 text-white text-sm">learn more </Link>
 
                         </div>
                         <Image src={dash}  alt=""/>
 
                     </div>
+                  
 
-                    <div className="flex justify-between items-center w-3/4 h-1/4  ">
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
+
+                    <div className="flex justify-between items-center w-full h-1/4  ">
+                       <div className="flex  items-center justify-around bg-blend-lighten bg-[#7A40F2]   shadow h-3/4 w-1/4 rounded-xl p-5">
                             <Image src={dash} alt="" className="h-3/4 w-1/4"/>
                             <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex  "> <h3 className=" font-bold text-white ">{202}/</h3>3000</span>
-                                <span>Step taken</span>
+                            <span className="text-sm text-gray-100 flex gap-2 ">Department</span>
+                                
+                                <span className="text-gray-100">{12}</span>
                             </div>
                             
 
                         </div>
-                       <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
+                       <div className="flex  items-center justify-around bg-blend-lighten bg-[#7A40F2]   shadow h-3/4 w-1/4 rounded-xl p-5">
                             <Image src={dash} alt="" className="h-3/4 w-1/4"/>
                             <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{408}</h3>kcal</span>
-                                <span>Calories burned</span>
+                                <span className="text-sm text-gray-100 flex gap-2 ">Doctors</span>
+                                <span className="text-gray-100">{14}</span>
                             </div>
                             
 
                         </div>
-                        <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900   shadow h-1/2 w-1/4 rounded-xl p-5">
+                        <div className="flex  items-center justify-around bg-blend-lighten bg-[#7A40F2]   shadow h-3/4 w-1/4 rounded-xl p-5">
                             <Image src={dash} alt="" className="h-3/4 w-1/4"/>
                             <div className="flex flex-col justify-center text-white">
-                                <span className="text-sm text-gray-400 flex gap-2 "> <h3 className=" font-bold text-white ">{87}</h3>litres</span>
-                                <span>Water Taken</span>
+                                <span className="text-sm text-gray-100 flex gap-2 ">Patients</span>
+                                <span className="text-gray-100">{20}</span>
                             </div>
                             
 
@@ -87,21 +96,11 @@ export default function HospitalDashboard(){
 
 
                     </div>
-                    {/* chart */}
-                    <div className="grid grid-cols-5 w-5/6 gap-4 h-1/4">
-                        <div className="  col-span-3 bg-blend-lighten bg-blue-900  h-full rounded-xl ">
+                   {/* //claim details */}
 
-                        </div>
-                        <div className=" bg-blend-lighten bg-blue-900  h-full rounded-xl ">
-
-</div>
-
-
-
-                    </div>
 
                     {/* reminders */}
-                      <div className="flex justify-between items-center w-3/4 h-1/4 mt-2  ">
+                      <div className="flex justify-between items-center w-full h-1/4 mt-10  ">
                        <div className="flex  items-center justify-around bg-blend-lighten bg-blue-900  h-full  shadow  w-1/4 rounded-xl p-5">
                             <Image src={dash} alt="" className="h-3/4 w-1/4"/>
                             <div className="flex flex-col justify-center text-white">
@@ -134,8 +133,19 @@ export default function HospitalDashboard(){
                     </div>
 
 
+                    </div>
+                    {/* //next column */}
+                    {/* <div className="flex flex-col w-full h-full items-center mt-6">
 
+                        <div className="flex items-center   bg-blend-lighten bg-blue-900   shadow h-1/4 w-3/4 rounded-xl ">
+                            <div className="flex items-center ">
+                            <Image src={dash} alt="" className="h-3/4 w-3/4"/>
+                            </div>
 
+                        </div>
+
+                    </div> */}
+                    </div>
         </div>
     )
 }
