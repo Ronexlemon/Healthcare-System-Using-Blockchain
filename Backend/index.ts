@@ -1,3 +1,0 @@
-type Health ={
-    name:string
-}
