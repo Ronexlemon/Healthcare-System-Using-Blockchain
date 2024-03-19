@@ -41,6 +41,10 @@ export default function SideBar() {
                             <FaBox className="h-3/4 w-1/4 text-gray-300" />
                             <button  className="text-xl text-[#BDC2F6] hover:text-white">claim details</button>
                         </div>
+                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center " onClick={()=>router.push("/hospital/claimform")}>
+                            <FaBox className="h-3/4 w-1/4 text-gray-300" />
+                            <button  className="text-xl text-[#BDC2F6] hover:text-white">Form</button>
+                        </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
                             <IoMdSettings className="h-3/4 w-1/4 text-gray-300" />
                             <button className="text-xl text-[#BDC2F6] hover:text-white">Settings</button>
