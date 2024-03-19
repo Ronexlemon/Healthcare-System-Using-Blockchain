@@ -31,7 +31,13 @@ const GeneralForm = () => {
   };
 
   return (
-    <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
+    <div className="h-screen w-full">
+        <div className="flex justify-center items-center w-full h-full">
+
+       
+
+   
+    <form className="w-3/4 " onSubmit={handleSubmit}>
       <div className="mb-4">
         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="hospitalId">
           Hospital ID
@@ -101,6 +107,8 @@ const GeneralForm = () => {
         </button>
       </div>
     </form>
+    </div>
+    </div>
   );
 };
 
