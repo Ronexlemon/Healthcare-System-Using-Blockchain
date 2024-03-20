@@ -1,16 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.2;
-import "@openzeppelin/contracts/utils/Create2.sol";
-import "@openzeppelin/contracts/utils/Context.sol";
-
-
-
-
+// import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract Health{
     //define the counter lib
-   using Counters for Counters.Counter;
-    Counters.Counter private _index;
+//    using Counters for Counters.Counter;
+//     Counters.Counter private _index;
+    uint256 private _tokenids;
     //enum status
     event change(uint _change);
     enum Status { Waiting, Match, Issue }
@@ -40,12 +36,13 @@ contract Health{
     //function add claim
     function addClaim(uint256 _caseNumber,string memory _patientName,uint256 _charges,string memory _userType,uint256 _patientId,uint256 _hospitalId,string memory _time)external {
        
-            _index.increment();
-     uint256 claimIndex = _index.current();
+            // _index.increment();
+     uint256 claimIndex = _tokenids; //_index.current();
      ClaimDetail memory claim = ClaimDetail(_caseNumber,_patientName,_charges,_userType,_patientId,_hospitalId,_time,claimIndex,Status.Waiting);
 
      allClaims[claimIndex] = claim;
      claimPerPatient[_caseNumber][_patientId][_hospitalId] =claim;
+     _tokenids ++;
 
      
 
@@ -100,10 +97,10 @@ contract Health{
 }
 // Retrieve all claims
 function getAllClaims() public view returns (ClaimDetail[] memory claimsAll) {
-    claimsAll = new ClaimDetail[](_index.current());
+    claimsAll = new ClaimDetail[](_tokenids);
     uint index = 0;
 
-    for (uint i = 1; i <= _index.current(); ++i) {
+    for (uint i = 0; i < _tokenids; ++i) {
         claimsAll[index] = allClaims[i];
         index++;
     }
@@ -115,7 +112,7 @@ function getAllClaims() public view returns (ClaimDetail[] memory claimsAll) {
 
 function getAllClaimsFromAHospital(uint _hospitalId)public view returns(ClaimDetail[] memory hospitalClaim){
     uint count=0;
-    for (uint i = 1; i <= _index.current(); ++i) {
+    for (uint i =0; i < _tokenids; ++i) {
        if(allClaims[i].hospitalId == _hospitalId){
         count ++;
        }
@@ -125,7 +122,7 @@ function getAllClaimsFromAHospital(uint _hospitalId)public view returns(ClaimDet
     hospitalClaim = new ClaimDetail[](count);
 
     uint indx=0;
-    for (uint i = 1; i <= _index.current(); ++i) {
+    for (uint i =0; i < _tokenids; ++i) {
        if(allClaims[i].hospitalId == _hospitalId){
         hospitalClaim[indx] = allClaims[i];
         indx ++;
