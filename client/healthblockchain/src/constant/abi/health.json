@@ -1,0 +1,345 @@
+[
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_change",
+          "type": "uint256"
+        }
+      ],
+      "name": "change",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_caseNumber",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_patientName",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_charges",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_userType",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_patientId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_hospitalId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_time",
+          "type": "string"
+        }
+      ],
+      "name": "addClaim",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "allClaims",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "caseNumber",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "patientName",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "charges",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "userType",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "patientId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "hospitalId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "time",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "claimIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum Health.Status",
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "claimPerPatient",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "caseNumber",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "patientName",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "charges",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "userType",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "patientId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "hospitalId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "time",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "claimIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum Health.Status",
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_caseNumber",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_patientName",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_charges",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_patientId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_hospitalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "compareclaimdetails",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllClaims",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "caseNumber",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "patientName",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "charges",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "userType",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "patientId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "hospitalId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "time",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "claimIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum Health.Status",
+              "name": "status",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Health.ClaimDetail[]",
+          "name": "claimsAll",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_hospitalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAllClaimsFromAHospital",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "caseNumber",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "patientName",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "charges",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "userType",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "patientId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "hospitalId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "time",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "claimIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum Health.Status",
+              "name": "status",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Health.ClaimDetail[]",
+          "name": "hospitalClaim",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
