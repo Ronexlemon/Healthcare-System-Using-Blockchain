@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import {useContractWrite} from "wagmi"
 
 const GeneralForm = () => {
     const [formData, setFormData] = useState({
