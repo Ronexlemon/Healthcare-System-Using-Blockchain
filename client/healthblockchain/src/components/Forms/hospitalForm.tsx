@@ -1,9 +1,19 @@
 "use client"
 import React, { useState } from "react";
-import {useContractWrite} from "wagmi"
+import { useWriteContract} from "wagmi"
+import abi from "../../../src/constant/abi/health.json"
+import { HealthContract } from "@/constant/data/address/contract";
+import { useAccount } from 'wagmi'
+import { config } from "@/config";
 
 const GeneralForm = () => {
+  const account:any = useAccount({
+    config, 
+  })
+  const { data: hash, writeContract } = useWriteContract() 
     const [formData, setFormData] = useState({
+      caseNumber:"",
+      patientName:"",
         userType: "", // This will store the selected option (hospital/patient)
         hospitalId: "",
         patientId: "",
@@ -22,13 +32,35 @@ const GeneralForm = () => {
       const handleSubmit = (e:any) => {
         e.preventDefault();
         console.log(formData);
-        setFormData({
-          userType: "",
-          hospitalId: "",
-          patientId: "",
-          charges: "",
-          time: "",
-        });
+        
+        //addClaim(uint256 _caseNumber,string memory _patientName,uint256 _charges,string memory _userType,uint256 _patientId,uint256 _hospitalId,string memory _time)
+        try{
+          writeContract({ 
+            address: HealthContract, 
+            abi, 
+            functionName: 'addClaim', 
+            args: [formData.caseNumber,formData.patientName,formData.charges,formData.userType,formData.patientId,formData.hospitalId,formData.time], 
+          })
+          if(hash){
+            console.log("hash",hash)
+             setFormData({
+            caseNumber:"",
+            patientName:"",
+            userType: "",
+            hospitalId: "",
+            patientId: "",
+            charges: "",
+            time: "",
+          });
+
+          } 
+         
+
+        }catch(error){
+          console.log("error",error)
+
+        }
+       
       };
 
   return (
@@ -115,11 +147,11 @@ const GeneralForm = () => {
         </label>
         <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
-          id="charges"
-          type="number"
+          id="patientName"
+          type="text"
           placeholder="John Doe"
-          name="charges"
-          value={formData.charges}
+          name="patientName"
+          value={formData.patientName}
           onChange={handleChange}
           required
         />
@@ -130,11 +162,11 @@ const GeneralForm = () => {
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline"
-            id="hospitalId"
+            id="caseNumber"
             type="number"
-            placeholder="1"
-            name="case Number"
-            value={formData.hospitalId}
+            placeholder="114"
+            name="caseNumber"
+            value={formData.caseNumber}
             onChange={handleChange}
             required
           />
@@ -164,6 +196,7 @@ const GeneralForm = () => {
       </div>
     
     </form>
+    <h1>Hash is {hash}</h1>
     </div>
     </div>
   );
