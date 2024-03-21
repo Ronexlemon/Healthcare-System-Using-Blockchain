@@ -29,43 +29,46 @@ const GeneralForm = () => {
         }));
       };
     
-      const handleSubmit = (e:any) => {
+      const handleSubmit = async (e:any) => {
         e.preventDefault();
-        console.log(formData);
-        
-        //addClaim(uint256 _caseNumber,string memory _patientName,uint256 _charges,string memory _userType,uint256 _patientId,uint256 _hospitalId,string memory _time)
-        try{
-          if(formData.userType.toLowerCase() === "hospital"){
-            writeContract({ 
-              address: HealthContract, 
-              abi, 
-              functionName: 'addClaim', 
-              args: [formData.caseNumber,formData.patientName,formData.charges,formData.userType,formData.patientId,formData.hospitalId,formData.time], 
-            })
-            if(hash){
-              console.log("hash",hash)
-               setFormData({
-              caseNumber:"",
-              patientName:"",
-              userType: "",
-              hospitalId: "",
-              patientId: "",
-              charges: "",
-              time: "",
-            });
-  
-            } 
-
-          }
-          
-         
-
-        }catch(error){
-          console.log("error",error)
-
-        }
        
+        
+        try {
+          console.log("Submitting form...",formData.userType.toLowerCase());
+          
+          if (formData.userType.toLowerCase() === "hospital") {
+            console.log("user type", formData.userType);
+             writeContract({
+              address: HealthContract,
+              abi,
+              functionName: 'addClaim',
+              args: [formData.caseNumber, formData.patientName, formData.charges, formData.userType, formData.patientId, formData.hospitalId, formData.time],
+            });
+          } else {
+            console.log("user type", formData.userType);
+             writeContract({
+              address: HealthContract,
+              abi,
+              functionName: 'compareclaimdetails',
+              args: [formData.caseNumber, formData.patientName, formData.charges, formData.patientId, formData.hospitalId],
+            });
+          }
+      
+          
+          setFormData({
+            caseNumber: "",
+            patientName: "",
+            userType: "",
+            hospitalId: "",
+            patientId: "",
+            charges: "",
+            time: "",
+          });
+        } catch (error) {
+          console.log("error", error);
+        }
       };
+      
 
   return (
     <div className="h-screen w-full">
@@ -200,7 +203,7 @@ const GeneralForm = () => {
       </div>
     
     </form>
-    <h1>Hash is {hash}</h1>
+   
     </div>
     </div>
   );
