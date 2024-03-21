@@ -4,13 +4,17 @@ import { FormEvent } from "react";
 import logoh from "../../../public/img/logoh.png"
 import Image from "next/image";
 import { useForm } from "react-hook-form";
-import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+
+import { getSession, signIn, useSession } from "next-auth/react";
+
+
 //import { useRouter } from "next/router";
 
 
 
 export default function LoginForm() {
-   // const router = useRouter();
+    const router = useRouter();
 
 
     
@@ -20,6 +24,7 @@ export default function LoginForm() {
         formState: { errors },
       } = useForm();
      const onSubmit = async(data: any) => {
+
         
         
         console.log("starting")
@@ -39,7 +44,31 @@ export default function LoginForm() {
                 password:data?.password,
               })
             console.log("res is  giving",res);
-            if (res?.status == 200){
+            if (res?.url){
+                const updatedSession: any = await getSession();
+                const userRole = updatedSession?.user?.user?.role;
+                console.log("user role",userRole)
+                
+               
+  
+                // Redirect based on user's role
+                switch (userRole) {
+                  case "hospital":
+                    router.replace("/hospital");
+                    break;
+                  case "insurance":
+                    router.replace("/insurance");
+                    break;
+                  case "patient":
+                    router.replace("/patient");
+                    break;
+                  
+                  default:
+                    // Redirect to a default route or handle accordingly
+                    router.replace("/login");
+                    break;
+                }
+
                 //router.push("/dashboard/patience")
                // router.replace("/dashboard/patience")
                 
