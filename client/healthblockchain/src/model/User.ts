@@ -26,8 +26,8 @@ const {Schema} = mongoose;
         role:{
             type:String,
             unique:false,
-            enum:["admin","patient","insurance"],
-            default:"user",  //if no
+            enum:["hospital","patient","insurance"],
+            default:"patient",  //if no
             required:true,
         },
 

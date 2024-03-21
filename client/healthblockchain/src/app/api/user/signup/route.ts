@@ -3,7 +3,7 @@ import User from '@/model/User';
 import connect from '@/lib/mongodb';
 import bcrypt from "bcryptjs"
 export async function POST(request:any) {
- const {password,firstName,lastName,email} = await request.json();
+ const {password,firstName,lastName,email,role} = await request.json();
     await connect();
     const existingUser = await User.findOne({email});
     if(existingUser){
@@ -16,7 +16,8 @@ export async function POST(request:any) {
      firstName: firstName,
       password: hashPassword,
        email:email,
-       lastName:lastName
+       lastName:lastName,
+       role:role,
       
       
     });
