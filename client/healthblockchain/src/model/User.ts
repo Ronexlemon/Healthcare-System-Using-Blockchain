@@ -23,6 +23,13 @@ const {Schema} = mongoose;
             unique:false,
             required:true,
         },
+        role:{
+            type:String,
+            unique:false,
+            enum:["admin","patient","insurance"],
+            default:"user",  //if no
+            required:true,
+        },
 
     },
     {timestamps:true}
