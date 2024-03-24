@@ -8,7 +8,7 @@ import { FaBox, FaHeart, FaChartPie } from "react-icons/fa";
 import { IoPersonRemove } from "react-icons/io5";
 import ConnectButton from "./connectButon/connect";
 import { useRouter } from 'next/navigation'
-import { getSession, signIn, useSession } from "next-auth/react";
+import { getSession, signIn, useSession,signOut } from "next-auth/react";
 import { useEffect,useState } from "react";
 
 export default  function SideBar() {
@@ -150,7 +150,7 @@ export default  function SideBar() {
                         </div>
                     </div>
 
-                    <div className="hover:bg-[#0E45B7] mb-10 hover:text-white w-3/4 h-10 rounded-xl flex  items-center">
+                    <div className="hover:bg-[#0E45B7] mb-10 hover:text-white w-3/4 h-10 rounded-xl flex  items-center" onClick={()=>signOut()}>
                     <IoPersonRemove className="h-3/4 w-1/4 text-gray-300" />
                         <button className="text-xl text-[#BDC2F6] hover:text-white">Logout</button>
                     </div>

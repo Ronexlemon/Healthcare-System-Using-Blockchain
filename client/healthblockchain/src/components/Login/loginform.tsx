@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 
 import { getSession, signIn, useSession } from "next-auth/react";
+import Link from "next/link";
 
 
 //import { useRouter } from "next/router";
@@ -116,11 +117,15 @@ export default function LoginForm() {
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" name="password" placeholder="************" />
                 </div>
                
-                <div className="flex items-center justify-end mb-2">
-                   
-                    <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+                <div className="flex items-center justify-end mb-2 gap-16">
+                <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
                         Forgot Password?
                     </a>
+                    
+                   
+                    <Link className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/signup">
+                        register
+                    </Link>
                 </div>
                 <div className="flex items-center justify-between  w-full">
                     <button type="submit" className="bg-[#A48989] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" >
