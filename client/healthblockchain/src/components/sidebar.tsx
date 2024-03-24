@@ -70,7 +70,7 @@ export default  function SideBar() {
                             
                             }
 
-{role == "patience"  && (
+{role == "patient"  && (
                         <div  className="flex flex-col justify-start space-y-8">
 
                        

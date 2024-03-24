@@ -4,8 +4,10 @@ import logoh from "../../../public/img/logoh.png"
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function SignUpForm() {
+  const router = useRouter();
     const {
         register,
         handleSubmit,
@@ -37,6 +39,7 @@ export default function SignUpForm() {
         })
         .then(datar => {
           console.log('Success:', datar);
+          router.replace('/login')
         })
         .catch(error => {
           console.error('Error:', error);
