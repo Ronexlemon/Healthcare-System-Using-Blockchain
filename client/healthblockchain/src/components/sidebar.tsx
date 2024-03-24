@@ -41,7 +41,7 @@ export default  function SideBar() {
                     <div className="flex flex-col justify-start space-y-8">
                     <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center  mt-5">
                             <Image src={hLogo} alt="" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Healthish</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Healthish</button>
                         </div>
                     {role == "insurance"  && (
                         <div  className="flex flex-col justify-start space-y-8">
@@ -49,19 +49,19 @@ export default  function SideBar() {
                        
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/insurance")}>
                             <IoMdHome className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">DashBoard</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">DashBoard</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/insurance/claims")}>
                             <FaChartPie className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Reports</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Reports</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
                             <FaHeart className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Goals</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Goals</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
                             <FaBox className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Reminders</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Reminders</button>
                         </div>
                         </div>
                         
@@ -76,23 +76,23 @@ export default  function SideBar() {
                        
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/patience")}>
                             <IoMdHome className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">DashBoard</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">DashBoard</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" >
                             <FaChartPie className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Profile</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Profile</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center " onClick={()=>router.push("/patience/claimform")}>
                             <FaBox className="h-3/4 w-1/4 text-gray-300" />
-                            <button  className="text-xl text-[#BDC2F6] hover:text-white">claim-form</button>
+                            <button  className="text-sm text-[#BDC2F6] hover:text-white">claim-form</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
                             <FaBox className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Claim-status</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Claim-status</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
                             <FaBox className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Claim-Balance</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Claim-Balance</button>
                         </div>
                         </div>
                         
@@ -103,28 +103,28 @@ export default  function SideBar() {
 
 
 {role == "hospital"  && (
-                        <div  className="flex flex-col justify-start space-y-8">
+                        <div  className="flex flex-col justify-start space-y-8 ">
 
                        
-                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/patience")}>
+                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/hospital")}>
                             <IoMdHome className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">DashBoard</button>
+                            <button className=" text-sm text-[#BDC2F6] hover:text-white">DashBoard</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" >
                             <FaChartPie className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Profile</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Profile</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" >
                             <FaChartPie className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Manage users</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Manage users</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" >
                             <FaChartPie className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Manage notifications</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Manage notifications</button>
                         </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center " onClick={()=>router.push("/hospital/claimform")}>
                             <FaBox className="h-3/4 w-1/4 text-gray-300" />
-                            <button  className="text-xl text-[#BDC2F6] hover:text-white">Claim-Form</button>
+                            <button  className="text-sm text-[#BDC2F6] hover:text-white">Claim-Form</button>
                         </div>
                        
                         
@@ -143,7 +143,7 @@ export default  function SideBar() {
                         
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center">
                             <IoMdSettings className="h-3/4 w-1/4 text-gray-300" />
-                            <button className="text-xl text-[#BDC2F6] hover:text-white">Settings</button>
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Settings</button>
                         </div>
                         <div>
                             <ConnectButton/>
@@ -152,7 +152,7 @@ export default  function SideBar() {
 
                     <div className="hover:bg-[#0E45B7] mb-10 hover:text-white w-3/4 h-10 rounded-xl flex  items-center" onClick={()=>signOut()}>
                     <IoPersonRemove className="h-3/4 w-1/4 text-gray-300" />
-                        <button className="text-xl text-[#BDC2F6] hover:text-white">Logout</button>
+                        <button className="text-sm text-[#BDC2F6] hover:text-white">Logout</button>
                     </div>
 
                 </div>
