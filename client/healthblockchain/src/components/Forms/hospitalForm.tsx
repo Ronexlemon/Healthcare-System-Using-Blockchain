@@ -44,6 +44,15 @@ const GeneralForm = () => {
               functionName: 'addClaim',
               args: [formData.caseNumber, formData.patientName, formData.charges, formData.userType, formData.patientId, formData.hospitalId, formData.time],
             });
+            setFormData({
+              caseNumber: "",
+              patientName: "",
+              userType: "",
+              hospitalId: "",
+              patientId: "",
+              charges: "",
+              time: "",
+            });
           } else {
             console.log("user type", formData.userType);
              writeContract({
@@ -52,18 +61,19 @@ const GeneralForm = () => {
               functionName: 'compareclaimdetails',
               args: [formData.caseNumber, formData.patientName, formData.charges, formData.patientId, formData.hospitalId],
             });
+            setFormData({
+              caseNumber: "",
+              patientName: "",
+              userType: "",
+              hospitalId: "",
+              patientId: "",
+              charges: "",
+              time: "",
+            });
           }
       
           
-          setFormData({
-            caseNumber: "",
-            patientName: "",
-            userType: "",
-            hospitalId: "",
-            patientId: "",
-            charges: "",
-            time: "",
-          });
+         
         } catch (error) {
           console.log("error", error);
         }

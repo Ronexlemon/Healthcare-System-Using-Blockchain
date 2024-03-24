@@ -60,7 +60,7 @@ export default function LoginForm() {
                     router.replace("/insurance");
                     break;
                   case "patient":
-                    router.replace("/patient");
+                    router.replace("/patience");
                     break;
                   
                   default:
