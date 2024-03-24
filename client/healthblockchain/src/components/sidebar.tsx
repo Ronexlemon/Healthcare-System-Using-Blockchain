@@ -39,12 +39,14 @@ export default  function SideBar() {
                         
 
                     <div className="flex flex-col justify-start space-y-8">
-                    <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center  mt-5">
-                            <Image src={hLogo} alt="" />
-                            <button className="text-sm text-[#BDC2F6] hover:text-white">Healthish</button>
-                        </div>
+                        
+                    
                     {role == "insurance"  && (
                         <div  className="flex flex-col justify-start space-y-8">
+                            <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center  mt-5">
+                            <Image src={hLogo} alt="" />
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Jitume Insurance</button>
+                        </div>
 
                        
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/insurance")}>
@@ -72,6 +74,10 @@ export default  function SideBar() {
 
 {role == "patient"  && (
                         <div  className="flex flex-col justify-start space-y-8">
+                            <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center  mt-5">
+                            <Image src={hLogo} alt="" />
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Reliance Hospital</button>
+                        </div>
 
                        
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/patience")}>
@@ -105,7 +111,10 @@ export default  function SideBar() {
 {role == "hospital"  && (
                         <div  className="flex flex-col justify-start space-y-8 ">
 
-                       
+<div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center  mt-5">
+                            <Image src={hLogo} alt="" />
+                            <button className="text-sm text-[#BDC2F6] hover:text-white">Reliance Hospital</button>
+                        </div>
                         <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/hospital")}>
                             <IoMdHome className="h-3/4 w-1/4 text-gray-300" />
                             <button className=" text-sm text-[#BDC2F6] hover:text-white">DashBoard</button>
