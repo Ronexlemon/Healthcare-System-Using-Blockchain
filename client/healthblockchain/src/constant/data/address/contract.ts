@@ -1,3 +1,8 @@
 
 export const HealthContract = "0xeCEe536500d8454c301B6DcB5Bf5ca9C750F8781"
 export const Transaction = "0x2e5115b217f4febf48574848e30f5b13e548b8158179d3c67f5fff09cd88562b"
+
+
+// Deployer: 0x65E28C9C4Ef1a756d8df1c507b7A84eFcF606fd4
+// Deployed to: 0x379900357392A77b885f326A30E7dbc23eFbf167
+// Transaction hash: 0x71ce0784148d407a9f6fe5f2b12b6b8b1551c9442dbff8e2215a0d697853ac29
