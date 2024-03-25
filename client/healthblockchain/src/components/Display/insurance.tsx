@@ -53,6 +53,12 @@ const DisplayData = () => {
               <p className="text-gray-700 mb-2">Status: {item.status==0?`Waiting`:item.status==1?`Match`:`Issue`}</p>
               <p className="text-gray-700">case Number: {Number(item.caseNumber)}</p>
               <p className="text-gray-700">Charges: ${Number(item.charges)}</p>
+              <div className=" w-full flex justify-end items-center">
+                <div className="bg-black w-20 rounded items-center text-center">
+                <button className="text-white text-center">Refund</button>
+                </div>
+               
+              </div>
             </div>
           </div>
         ))}

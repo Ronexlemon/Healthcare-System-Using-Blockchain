@@ -1,5 +1,5 @@
 
-export const HealthContract = "0xeCEe536500d8454c301B6DcB5Bf5ca9C750F8781"
+export const HealthContract = "0x379900357392A77b885f326A30E7dbc23eFbf167"  ///"0xeCEe536500d8454c301B6DcB5Bf5ca9C750F8781"
 export const Transaction = "0x2e5115b217f4febf48574848e30f5b13e548b8158179d3c67f5fff09cd88562b"
 
 
