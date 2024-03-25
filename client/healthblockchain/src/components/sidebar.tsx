@@ -74,7 +74,7 @@ export default  function SideBar() {
                         <div  className="flex flex-col justify-start space-y-8">
 
                        
-                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/patience")}>
+                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center" onClick={()=>router.push("/patient")}>
                             <IoMdHome className="h-3/4 w-1/4 text-gray-300" />
                             <button className="text-sm text-[#BDC2F6] hover:text-white">DashBoard</button>
                         </div>
@@ -82,7 +82,7 @@ export default  function SideBar() {
                             <FaChartPie className="h-3/4 w-1/4 text-gray-300" />
                             <button className="text-sm text-[#BDC2F6] hover:text-white">Profile</button>
                         </div>
-                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center " onClick={()=>router.push("/patience/claimform")}>
+                        <div className="hover:bg-[#0E45B7] hover:text-white w-3/4 h-10 rounded-xl flex items-center " onClick={()=>router.push("/patient/claimform")}>
                             <FaBox className="h-3/4 w-1/4 text-gray-300" />
                             <button  className="text-sm text-[#BDC2F6] hover:text-white">claim-form</button>
                         </div>
