@@ -60,7 +60,7 @@ contract Health{
 
     
     // patient should put this to compare the details
-   function addClaim(
+   function compareClaimdetails(
     uint256 _caseNumber,
     string memory _patientName,
     uint256 _charges,
