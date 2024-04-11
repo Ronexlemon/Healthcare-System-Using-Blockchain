@@ -11,7 +11,7 @@ const GeneralForm = () => {
     config, 
   })
   const { data: hash, writeContract } = useWriteContract() 
-  const { data: hash2, writeContractAsync:writepatientContract } = useWriteContract() 
+  const { data: hash2, writeContract:writepatientContract } = useWriteContract() 
     const [formData, setFormData] = useState({
       caseNumber:"",
       patientName:"",
@@ -56,7 +56,7 @@ const GeneralForm = () => {
             });
           } else {
             console.log("user type", formData.userType);
-              await  writepatientContract({
+                writepatientContract({
               address: HealthContract,
               abi,
               functionName: 'compareClaimdetails',
